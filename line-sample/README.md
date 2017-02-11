@@ -19,4 +19,4 @@ An implementation of Reservoir sampling, you can use it to sample file lines
 **证明:**
 第m个对象被选中的概率=选择m的概率*（其后元素不被选择的概率+其后元素被选择的概率*不替换第m个对象的概率），即
 
-\frac{1}{\pi}=\frac{2\sqrt{2}}{9801}\sum_{k=0}^\infty\frac{(4k)!(1103+26390k)}{(k!)^4396^{4k}}
+$$\frac{1}{\pi}=\frac{2\sqrt{2}}{9801}\sum_{k=0}^\infty\frac{(4k)!(1103+26390k)}{(k!)^4396^{4k}}
