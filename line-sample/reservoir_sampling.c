@@ -43,11 +43,11 @@ bool malloc2(char ***a, int m, int n) {
 }
 
 void free2(char **a, int n) {
-    if (!a) {
+    if (a == NULL) {
         return;
     }
     while (n > 0) {
-        if (a[--n] && a[n]) {
+        if (a[--n]) {
             free(a[n]);
             a[n] = NULL;
         }
