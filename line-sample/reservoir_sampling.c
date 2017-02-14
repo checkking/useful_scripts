@@ -55,10 +55,11 @@ void free2(char **a, int n) {
 }
 
 int sample(int k, int i) {
-    int a = rand() % i;
+    int a = -1;
     if (k >= i) {
         return -1;
     }
+    a = rand() % i;
     return  a < k ? a : -1;
 }
 
