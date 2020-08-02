@@ -1,0 +1,34 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "nested": {
+            "path": "keywords",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": { "keywords.key":  "攻略"}
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "term": {
+            "disease": "出生缺陷"
+          }
+        }
+      ],
+      "must_not": [
+	     {
+			"ids": {
+            "values": ["gz000020010inixx", "hz000020010iniyy"]
+          }
+		 }
+	  ]
+     }
+    }
+}
